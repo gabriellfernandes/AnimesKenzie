@@ -1,0 +1,189 @@
+body{
+    background-image: url(https://animesup.biz/maou2.webp);
+    background-size: 110%;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 40%);
+    border-bottom: 1px solid #000;
+    background-color: #000000d1;
+}
+.conteiner{
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+.conteiner .ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+
+.conteiner .ul .logo{
+    height: 40px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.conteiner .ul .li{
+    padding: 0px 30px;
+    text-align: center;
+}
+.conteiner .ul .li2{
+    margin-bottom: 28px;
+    padding: 0px 0px;
+    margin-left: 0px;
+    width: 100px;
+}
+.conteiner .ul .tamanho{
+    background-color: #000;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    width: 300px;
+    display: flex;
+    transform: matrix(1, 0, 0, 1, 10, 0);
+}
+.conteiner .ul .li3{
+    margin-bottom: 18px;
+    padding: 0px 0px;
+    width: 100px;
+}
+.conteiner .ul .tamanho2{
+    width: 300px;
+    padding-left: 20px;
+    display: flex;
+    transform: matrix(1, 0, 0, 1, 10, 0);
+    background-color: #000;
+}
+.conteiner .ul .tamanho .ul2,.conteiner .ul .tamanho2 .ul3{
+    list-style-type: "▸";
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.conteiner .ul .tamanho .ul2 li{
+    margin-right: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.conteiner .ul .tamanho2 .ul3 li{
+    margin-right: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.conteiner .ul .li a, .li2  a, .li2 summary, .li3 a, .li3 summary{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+.conteiner .ul  .li2 .details1{
+    margin-top: 25px;
+    text-align: center;
+}
+.conteiner .ul  .li3 .details2{
+    margin-top: 17px;
+    text-align: center;
+}
+
+.conteiner .details1[open], .conteiner .details2[open]{
+    overflow: hidden;
+    height: 20px;
+}
+.conteiner .details1[open]:hover, .conteiner .details2[open]:hover{
+    overflow: visible;
+}
+
+.conteiner .details1[open] .ul2{
+    padding-top: 29px;
+    display: inline-block;
+}
+.conteiner .details2[open] .ul3{
+    padding-top: 29px;
+    display: inline-block;
+}
+
+/* Parte do hover para mudar de cor*/
+    .conteiner .ul .li2 summary:hover{
+        color: rgb(237, 14, 14);
+        cursor: pointer;
+    }
+    .conteiner .ul .li2 summary::marker{
+        color: #000000d1;
+    }
+    .conteiner .ul .li2 .details1 .tamanho .ul2 li:hover{
+        color: rgb(237, 14, 14);
+    }
+    .conteiner .ul .li2 .details1 .tamanho .ul2 a:hover{
+        color: rgb(237, 14, 14);
+    }
+    
+    .conteiner .ul .li3 summary:hover{
+        color: rgb(237, 14, 14);
+        cursor: pointer;
+    }
+    .conteiner .ul .li3 summary::marker{
+        color: #000000d1;
+    }
+    .conteiner .ul .li3 .details2 .tamanho2 .ul3 li:hover{
+        color: rgb(237, 14, 14);
+    }
+    .conteiner .ul .li3 .details2 .tamanho2 .ul3 a:hover{
+        color: rgb(237, 14, 14);
+    }
+
+    .conteiner .ul .li a:hover{
+        color: rgb(237, 14, 14);
+    }
+
+/* Pesquisa */
+    .botao img{
+        height: 20px;
+        width: 20px;
+    }
+    .botao{
+        background-color: rgba(0, 0, 0, 0);
+        border: 0.5px solid rgba(255, 255, 255, 0.6);
+        border-left: 0px;
+        height: 30px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .buscar{
+        margin: 0 auto;
+        margin-left: 60px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 0.6);
+        border: 0.5px solid rgba(255, 255, 255, 0.6);
+        border-right: 0px solid rgba(255, 255, 255, 0.6);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding-left: 15px;
+    }
+    
+    .buscar:hover,.buscar:focus, .buscar::selection{
+        outline: none;
+    }
+
+    span{
+        padding: 0px 10px 5px;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+    }
+
+    .img{
+        height: 25px;
+        width: 25px;
+    }
