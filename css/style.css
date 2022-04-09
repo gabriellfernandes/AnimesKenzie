@@ -237,11 +237,7 @@ body{
         background-color: #000000a0;
     }
 
-    .conteiner-main .titulo
-    {
-        margin-left: 30px;
-        margin-top: 30px;
-    }
+
     .conteiner-main .h2{
         color: rgb(255, 255, 255);
         margin-left: 30px;
@@ -256,4 +252,44 @@ body{
         width: 75px;
         margin-top: 20px;
         margin-left: 101px;
+    }
+
+
+    .conteiner-main .lancamento ul{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        width: 1300px;
+    }
+
+    .conteiner-main .lancamento ul li a figure{
+        height: 259px; 
+        width: 185px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .conteiner-main .lancamento a{
+        text-decoration: none;
+    }
+    .conteiner-main .lancamento p{
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        width: 185px;
+        height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    /* parte do hover do lançamentos */
+    .conteiner-main .lancamento figure img:hover{
+        filter: brightness(40%);
+    }
+    
+    .conteiner-main .lancamento p:hover{
+        color: rgb(237, 14, 14);
     }
