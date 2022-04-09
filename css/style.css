@@ -38,8 +38,11 @@ body{
     padding: 0px 30px;
     text-align: center;
 }
+.conteiner .ul .po{
+    margin-bottom: 5px;
+}
 .conteiner .ul .li2{
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     padding: 0px 0px;
     margin-left: 0px;
     width: 100px;
@@ -87,10 +90,11 @@ body{
     text-decoration: none;
 }
 .conteiner .ul  .li2 .details1{
-    margin-top: 25px;
+    margin-top: 29px;
     text-align: center;
 }
 .conteiner .ul  .li3 .details2{
+    width: 80px;
     margin-top: 17px;
     text-align: center;
 }
@@ -186,4 +190,39 @@ body{
     .img{
         height: 25px;
         width: 25px;
+    }
+
+/* SubMenu */
+    .tamanho-submenu{
+        margin: 0 auto;
+        width: 1300px;
+        height: 60px;
+        background-color: #000000a0;
+        margin-left: 324px;
+        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+    }
+    .submenu .ul5{
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+        text-align: center;
+    }
+    .submenu .ul5 li{
+        padding: 20px 17px 18px 16px;
+        width: 59px;
+    }
+    .submenu .ul5 li:hover{
+        cursor: pointer;
+        background-color: rgb(237, 14, 14);
+    }
+    
+    .submenu .ul5 li a{
+        color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .submenu .ul5 li:hover a{
+        color: white;
     }
