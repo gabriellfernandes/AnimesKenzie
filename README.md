@@ -12,9 +12,11 @@ como esta ficando por agora.
 
    ![Capturar3](https://user-images.githubusercontent.com/96635752/162526949-0db5c5f0-3921-4cd9-ba83-ae879d6eb339.PNG)
 
-Fiz o submenu e parte de lançamentos
+Fiz o submenu
 
   ![image](https://user-images.githubusercontent.com/96635752/162581722-0747e707-a41b-4327-981c-5f54c55e0c70.png)
+  
+Fiz a parte de lançamentos
   
   ![image](https://user-images.githubusercontent.com/96635752/162593009-c76ddcdc-ce46-419c-88fa-a27934b25adc.png)
 
