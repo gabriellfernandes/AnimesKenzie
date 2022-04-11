@@ -21,7 +21,7 @@ Fiz a parte de lançamentos
   ![image](https://user-images.githubusercontent.com/96635752/162593009-c76ddcdc-ce46-419c-88fa-a27934b25adc.png)
 
 Fiz a parte do adicionados recentemente
-
-   ![image](https://user-images.githubusercontent.com/96635752/162649256-9a7cfa93-a8db-43c4-bde9-e15633382b8b.png)
+   
+   ![image](https://user-images.githubusercontent.com/96635752/162649672-9865b1d8-5d78-40b4-a555-39af080022bd.png)
 
 
