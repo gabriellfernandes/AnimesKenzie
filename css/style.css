@@ -1,6 +1,6 @@
 body{
     background-image: url(https://animesup.biz/maou2.webp);
-    background-size: 110%;
+    background-size: cover;
 }
 .nav{
     display: flex;
@@ -230,11 +230,12 @@ body{
 /* main */
     .conteiner-main{
         width: 1300px;
-        height: 849px;
+        height: 1200px;
         display: flex;
         padding-top: 20px;
         margin-left: 324px;
         background-color: #000000a0;
+        display: inline-block;
     }
 
 
@@ -248,7 +249,7 @@ body{
     }
 
     .conteiner-main .border{
-        border-bottom: 4px solid rgb(237, 14, 14);
+        border-bottom: 3px solid rgb(237, 14, 14);
         width: 75px;
         margin-top: 20px;
         margin-left: 101px;
@@ -258,8 +259,8 @@ body{
     .conteiner-main .lancamento ul{
         display: flex;
         justify-content: space-evenly;
-        flex-wrap: nowrap;
         width: 1300px;
+        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
     }
 
     .conteiner-main .lancamento ul li a figure{
@@ -277,6 +278,7 @@ body{
     .conteiner-main .lancamento p{
         color: rgb(255, 255, 255);
         margin-top: 10px;
+        margin-bottom: 10px;
         width: 185px;
         height: 18px;
         text-overflow: ellipsis;
@@ -292,4 +294,36 @@ body{
     
     .conteiner-main .lancamento p:hover{
         color: rgb(237, 14, 14);
+    }
+
+/* Adicionado Recentes */
+    .conteiner-main .h2dif{
+        margin-top: 60px;
+    }
+    .conteiner-main .border2{
+        margin-left: 180px;
+        width: 132px;
+    }
+
+    .lancamento .ul{
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .lancamento .ul li figure{
+        width: 287px;
+        height: 158px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .conteiner-main .lancamento .p2{
+        width: 280px;
+    }
+    .conteiner-main .lancamento .p3{
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .conteiner-main .lancamento .p3:hover{
+        color: rgba(255, 255, 255, 0.5);
     }
