@@ -1,7 +1,7 @@
 # Treinamento-html-css-js
 Vou tentar recriar a home do animesup e quero deixa tudo nele funcional com o js.
 
-como esta ficando por agora.
+Inicio do projeto
    
    ![Capturar](https://user-images.githubusercontent.com/96635752/162526611-13350b9a-93be-43cf-9072-f6c789b83b35.PNG)
 
@@ -23,5 +23,11 @@ Fiz a parte de lançamentos
 Fiz a parte do adicionados recentemente
    
    ![image](https://user-images.githubusercontent.com/96635752/162649742-77008db4-b688-41f3-931f-1459dd3155a5.png)
+   
+Fiz todo o resto 
+
+   ![image](https://user-images.githubusercontent.com/96635752/163009193-212f4abd-4de1-4067-8d68-0fb14283012d.png)
+
+   ![image](https://user-images.githubusercontent.com/96635752/163009413-32132ca5-0db9-4ae0-a72a-81672b7b3675.png)
 
 
