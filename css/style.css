@@ -1,6 +1,7 @@
 body{
     background-image: url(https://animesup.biz/maou2.webp);
     background-size: cover;
+    margin-bottom: 200px;
 }
 .nav{
     display: flex;
@@ -230,7 +231,7 @@ body{
 /* main */
     .conteiner-main{
         width: 1300px;
-        height: 1200px;
+        height: 100%;
         display: flex;
         padding-top: 20px;
         margin-left: 324px;
@@ -326,4 +327,159 @@ body{
     }
     .conteiner-main .lancamento .p3:hover{
         color: rgba(255, 255, 255, 0.5);
+    }
+
+/* Filmes adicionados */
+    .conteiner-main .border3{
+        margin-left: 113px;
+        width: 115px;
+    }
+
+ /* Ultimos animes lançados  */
+    .conteiner-main .border4{
+        margin-left: 190px;
+        width: 131px;
+    }
+
+/*  TOP 10 EPIS - SEMANAL */
+    .conteiner-main .border5{
+        margin-left: 146px;
+        width: 105px;
+    }
+
+    .conteiner-main .lancamento .ul5{
+        margin-bottom: 50px;
+    }
+
+/* footer */
+
+    .conteiner-footer{
+        width: 1300px;
+        background-color: #000000a0;
+        margin: 0 auto;
+        margin-left: 324px;
+        height: 100%;
+        display: inline-block;
+    }
+    .conteiner-footer .tamanho4{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 170px;
+        padding-left: 120px;
+        padding-right: 120px;
+        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+    }
+    
+    .conteiner-footer .footer{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        width: 460px;
+        margin-right: 80px;
+    }
+    .conteiner-footer .footer .details12{
+        display: flex;
+        height: 90px;
+        flex-wrap: wrap;
+        width: 200px;
+        margin-left: 20px;
+    }
+    .conteiner-footer .footer .details12 .ulfooter2{
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        flex-direction: column;
+        height: 60px;
+        width: 200px;
+        flex-wrap: wrap;
+    }
+    .conteiner-footer .footer .details12 .ulfooter{
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        flex-direction: column;
+        height: 120px;
+        width: 200px;
+        flex-wrap: wrap;
+    }
+
+    .conteiner-footer .footer .details12 summary{
+        
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        cursor:default;
+    }
+
+
+    .conteiner-footer .footer .details12 summary::marker{
+        background-color: #000000a0;
+        content: "";
+    }
+
+    .conteiner-footer .footer .details12 li{
+        height: 20px;
+        width: 90px;
+        background-color: #00000068;
+        margin: 5px 5px;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .conteiner-footer .footer .details12 li a{
+        color: #fc0000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* sistema de hover */
+    .conteiner-footer .footer .details12 li:hover{
+        background-color: #3a393968;
+    }
+
+    /* outro lado do footer */
+    .conteiner-footer .footer-logo img{
+        height: 40px;
+        width: 280px;
+    }
+    .conteiner-footer .footer-logo{
+        margin: 0 auto;
+        overflow: visible;
+    }
+    .conteiner-footer .footer-logo figcaption{
+        color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        width: 280px;
+        text-align: center;
+    }
+
+/* Parte final */
+    .conteiner-footer .tamanho5{
+        display: flex;
+        width: 100%;
+        height: 60px;
+        margin-top: 30px;
+        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .conteiner-footer .tamanho5 p{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+    }
+    .conteiner-footer .tamanho5 button{
+        height: 35px;
+        width: 35px;
+        border: none;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+    }
+
+    .conteiner-footer .tamanho5 button a{
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
     }
