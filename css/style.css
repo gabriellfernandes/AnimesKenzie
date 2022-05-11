@@ -473,9 +473,8 @@ body{
         width: 35px;
         border: none;
         font-size: 18px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: #00000000;
         border-radius: 8px;
-        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
     }
 
     .conteiner-footer .tamanho5 button a{
@@ -484,13 +483,18 @@ body{
         color: #fff;
     }
 
+    .conteiner-footer .tamanho5 button:hover a{
+        color: rgb(237, 14, 14);
+    }
+
+
 /* A parte do botao para lado e pro outro */
 .lado {
     width: 40px;
     height: 20px;
     margin-left: 1150px;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: #000000d1;
+    color: rgba(255, 255, 255, 0.665);
+    background-color: #00000000;
     border: none;
 }
 
