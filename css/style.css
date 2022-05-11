@@ -483,3 +483,22 @@ body{
         font-size: 18px;
         color: #fff;
     }
+
+/* A parte do botao para lado e pro outro */
+.lado {
+    width: 40px;
+    height: 20px;
+    margin-left: 1150px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #000000d1;
+    border: none;
+}
+
+.lado:hover{
+    cursor: pointer;
+    color: rgb(237, 14, 14);
+}
+
+.lado1{
+    margin-left: 0px;
+}
