@@ -1,0 +1,45 @@
+body{
+    background-image: url(https://animesup.biz/maou2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 939px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000d1;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.form p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form input{
+    padding: 20px;
+    width: 500px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    border: none;
+    font-size: 24px;
+}
+
+.form input:hover{
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+.form input:focus{
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
