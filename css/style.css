@@ -5,7 +5,7 @@ body{
 }
 .nav{
     display: flex;
-    width: 100%;
+    width: 99.2vw;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -73,7 +73,6 @@ body{
     list-style-type: "▸";
     color: rgba(255, 255, 255, 0.6);
 }
-
 .conteiner .ul .tamanho .ul2 li{
     margin-right: 30px;
     margin-bottom: 15px;
@@ -84,8 +83,6 @@ body{
     margin-bottom: 15px;
     text-align: left;
 }
-
-
 .conteiner .ul .li a, .li2  a, .li2 summary, .li3 a, .li3 summary{
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
@@ -99,7 +96,6 @@ body{
     margin-top: 17px;
     text-align: center;
 }
-
 .conteiner .details1[open], .conteiner .details2[open]{
     overflow: hidden;
     height: 20px;
@@ -107,7 +103,6 @@ body{
 .conteiner .details1[open]:hover, .conteiner .details2[open]:hover{
     overflow: visible;
 }
-
 .conteiner .details1[open] .ul2{
     padding-top: 29px;
     display: inline-block;
@@ -195,11 +190,11 @@ body{
 
 /* SubMenu */
     .tamanho-submenu{
-        margin: 0 auto;
-        width: 1300px;
+        margin-left: 7.2%;
+        width: 90vw;
         height: 60px;
         background-color: #000000a0;
-        margin-left: 324px;
+        overflow: auto;
         box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
     }
     .submenu .ul5{
@@ -230,11 +225,11 @@ body{
 
 /* main */
     .conteiner-main{
-        width: 1300px;
+        margin-left: 7.2%;
+        width: 90vw;
         height: 100%;
         display: flex;
         padding-top: 20px;
-        margin-left: 324px;
         background-color: #000000a0;
         display: inline-block;
     }
@@ -258,10 +253,30 @@ body{
 
 
     .conteiner-main .lancamento ul{
+        margin-left: 10px;
         display: flex;
-        justify-content: space-evenly;
-        width: 1300px;
-        box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+        width: 89.5vw;
+        box-shadow: 0px 1px 0px rgba(101, 101, 101, 0.424);
+        overflow: auto;
+        padding: 0px 2.5%;
+        transition: 0.8s;
+    }
+
+    .conteiner-main .lancamento ul::-webkit-scrollbar-track {
+        display: none;
+    }
+   
+    .conteiner-main .lancamento ul::-webkit-scrollbar {
+        width: 6px;
+        background: #F4F4F4;
+        display: none;
+    }
+    .conteiner-main .lancamento ul::-webkit-scrollbar-thumb {
+        background: #dad7d7;
+    }
+    
+    .conteiner-main .lancamento ul li{
+        margin-right: 55px;
     }
 
     .conteiner-main .lancamento ul li a figure{
@@ -289,11 +304,11 @@ body{
     }
     
     /* parte do hover do lançamentos */
-    .conteiner-main .lancamento figure img:hover{
+    .conteiner-main .lancamento li:hover figure img{
         filter: brightness(40%);
     }
     
-    .conteiner-main .lancamento p:hover{
+    .conteiner-main .lancamento li:hover p{
         color: rgb(237, 14, 14);
     }
 
@@ -306,11 +321,16 @@ body{
         width: 132px;
     }
 
-    .lancamento .ul{
+    .conteiner-main .lancamento .ul{
+        margin-top: 50px;
         display: flex;
-        padding: 20px;
+        width: 89.4vw;
         flex-wrap: wrap;
     }
+
+
+    
+    
     .lancamento .ul li figure{
         width: 287px;
         height: 158px;
@@ -354,10 +374,9 @@ body{
 /* footer */
 
     .conteiner-footer{
-        width: 1300px;
+        width: 90vw;
         background-color: #000000a0;
-        margin: 0 auto;
-        margin-left: 324px;
+        margin-left: 7.2%;
         height: 100%;
         display: inline-block;
     }
@@ -376,7 +395,7 @@ body{
         display: flex;
         justify-content: space-between;
         margin-bottom: 80px;
-        width: 460px;
+        width: 30vw;
         margin-right: 80px;
     }
     .conteiner-footer .footer .details12{
@@ -492,7 +511,7 @@ body{
 .lado {
     width: 40px;
     height: 20px;
-    margin-left: 1150px;
+    margin-left: 80vw;
     color: rgba(255, 255, 255, 0.665);
     background-color: #00000000;
     border: none;
@@ -506,3 +525,9 @@ body{
 .lado1{
     margin-left: 0px;
 }
+
+@media screen and (min-width: 1350px) {
+    .conteiner-main .lancamento .ul li{
+        margin-right: 1%;
+    }
+  }
