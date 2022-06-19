@@ -41,7 +41,7 @@ class Card{
             this.animesLacamentos[1].innerHTML = ""
             
             const ul = document.createElement("ul");
-            ul.id = "ul"
+            ul.className = "Tip-ul"
 
             anime.map((elem) => {
                 const li = document.createElement("li");
@@ -74,11 +74,10 @@ class Card{
     }
 
     static animesComEpCard(anime){
-        
         this.animesLacamentos[0].innerHTML = ""
         
         const ul = document.createElement("ul");
-        ul.className = "ul"
+        ul.className = "ul Tip-ul"
         this.animesLacamentos[1].appendChild(ul);
         
         anime.map((elem) => {
@@ -120,7 +119,7 @@ class Card{
         this.animesLacamentos[3].innerHTML = ""
             
         const ul = document.createElement("ul");
-        
+        ul.className = "Tip-ul"
 
         anime.map((elem) => {
             const li = document.createElement("li");
@@ -153,7 +152,7 @@ class Card{
         this.animesLacamentos[2].innerHTML = ""
             
         const ul = document.createElement("ul");
-        
+        ul.className = "Tip-ul"
 
         anime.map((elem) => {
             const li = document.createElement("li");

@@ -1,15 +1,24 @@
 export function button(){
     document.body.addEventListener("click", (e) => {
-    if(e.target.className == "lado"){
-         const scroll = document.getElementById("ul");
+    
+     const button = document.getElementsByClassName("lado")
+     const button2 = document.getElementsByClassName("lado1")
+    
+    Array.from(button).forEach((elem, i) => {
+          if(e.target.className == elem.className){
+               const scroll = document.getElementsByClassName("Tip-ul")[i + 1]
+               scroll.style.transition = "0.8s";
+               scroll.scrollLeft -= 250;
+               console.log(scroll)
+          }
+    })
          
-         scroll.style.transition = "0.8s";
-         scroll.scrollLeft -= 250;
-    }
-    if(e.target.className == "lado lado1"){
-         const scroll = document.getElementById("ul");
-         scroll.style.transition = "0.8s";
-         scroll.scrollLeft += 250;
-    }
- }) 
+    Array.from(button2).forEach((elem, i) => {
+          if(e.target.className == elem.className){
+               const scroll = document.getElementsByClassName("Tip-ul")[i + 1]
+               scroll.style.transition = "0.8s";
+               return scroll.scrollLeft += 250; 
+          }
+     })
+     })
 }
