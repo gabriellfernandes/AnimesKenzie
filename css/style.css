@@ -381,6 +381,7 @@ body{
         display: inline-block;
     }
     .conteiner-footer .tamanho4{
+        margin-top: 40px;
         display: flex;
         justify-content: space-around;
         align-items: center;
