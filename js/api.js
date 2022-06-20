@@ -305,7 +305,7 @@ class Card{
         ulDescription.appendChild(liDescription3);
 
         const span3 = document.createElement("span");
-        span3.innerText = anime.status;
+        span3.innerText = anime.status == "Ongoing"? "Em andamento": "Finalizado";
         pDescription3.appendChild(span3);
 
         const divContainersinopse = document.createElement("div");
