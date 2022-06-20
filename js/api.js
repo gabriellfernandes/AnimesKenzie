@@ -1,5 +1,5 @@
 let cont = 1
-
+let cont2 = 1
 export class Api {
     static BASE = "https://gogoanime.herokuapp.com"
 
@@ -48,6 +48,12 @@ export class Api {
         return Card.animeDetailtCard(date);
     }
 
+    static async getEpisodiosWatch(id){
+        const response = await fetch(`${this.BASE}/vidcdn/watch/${id}`,{});
+        
+        const date = await response.json();
+        return console.log(date)
+    }
 }
 
 class Card{
@@ -67,9 +73,11 @@ class Card{
 
             const a = document.createElement("a")
             a.href = "#" 
-            a.id = `A${cont}`;
+            a.href = "#";
+            a.id = `A${cont}`
             a.className = "Anime-link"
             cont++;
+            
             li.appendChild(a)
 
             const figure = document.createElement("figure")
@@ -78,9 +86,6 @@ class Card{
             a.appendChild(figure)
         
             
-
-           
-    
 
             const figureCaption = document.createElement("figcaption")
             figureCaption.innerText = elem.animeTitle;
@@ -116,16 +121,19 @@ class Card{
             const li = document.createElement("li");
 
             const a = document.createElement("a");
-            a.href = elem.episodeUrl;
-            a.target = "_blank";
+            a.href = "#";
+           
             li.appendChild(a);
 
             const figure = document.createElement("figure");
+            figure.style.backgroundImage = `url(${elem.animeImg})`;
+            figure.style.backgroundSize = "cover";
             a.appendChild(figure);
 
             const img = document.createElement("img");
             img.src = elem.animeImg
             img.alt = elem.animeTitle;
+            img.style.display = "none";
             figure.appendChild(img);
                 
             const figureCaption = document.createElement("figcaption");
@@ -134,7 +142,7 @@ class Card{
 
             const p = document.createElement("p");
             p.innerText = elem.animeTitle;
-            li.appendChild(p);
+            a.appendChild(p);
  
             ul.appendChild(li);
         });
@@ -154,8 +162,11 @@ class Card{
             const li = document.createElement("li");
 
             const a = document.createElement("a");
-            a.href = elem.episodeUrl;
-            a.target = "_blank";
+            a.href = "#e";
+            a.id = `A${cont}`
+            cont++;
+            a.className = "Anime-link"
+
             li.appendChild(a);
 
             const figure = document.createElement("figure");
@@ -169,7 +180,7 @@ class Card{
 
             const p = document.createElement("p");
             p.innerText = elem.animeTitle;
-            li.appendChild(p);
+            a.appendChild(p);
  
             ul.appendChild(li);
         });
@@ -189,8 +200,10 @@ class Card{
             const li = document.createElement("li");
 
             const a = document.createElement("a");
-            a.href = elem.episodeUrl;
-            a.target = "_blank";
+            a.href = "#";
+            a.id = `A${cont}`
+            cont++;
+            a.className = "Anime-link"
             li.appendChild(a);
 
             const figure = document.createElement("figure");
@@ -204,7 +217,7 @@ class Card{
 
             const p = document.createElement("p");
             p.innerText = elem.animeTitle;
-            li.appendChild(p);
+            a.appendChild(p);
  
             ul.appendChild(li);
         });
@@ -236,8 +249,8 @@ class Card{
 
         const li2 = document.createElement("li");
         const p2 = document.createElement("p");
-        p2.innerText = anime.otherNames;
-        p2.className = "subtitle"
+        p2.innerText = `Titulo Original: ${anime.otherNames}`;
+        p2.className = "subTitle"
         li2.appendChild(p2);
         ul.appendChild(li2);
 
@@ -328,6 +341,10 @@ class Card{
 
         anime.episodesList.map((elem) => {
             const liTemporada = document.createElement("li");
+            liTemporada.className = "episodio-Link"
+            liTemporada.id = `a${cont2}`;
+            cont2++;
+
             const img = document.createElement("img");
             img.src = "./img/episodio.jpg";
             img.alt = "Episódio";
@@ -356,24 +373,32 @@ class Card{
         divConteinerTop.appendChild(ulTop);
 
         Api.getTopAnimesItens().then((animes) => {
-            animes.map((elem) => {
+            for(let i = 0; i < 10; i++){
                 const liTop = document.createElement("li");
-               
-                const figure = document.createElement("img");
-                figure.src = elem.animeImg;
-                figure.alt = elem.animeTitle;
-                liTop.appendChild(figure);
+                const a = document.createElement("a");
+                a.href = "#";
+                a.id = `A${cont}`
+                a.className = "Anime-link"
+                cont++;
+                
+                const figure = document.createElement("figure");
+                figure.style.backgroundImage = `url(${animes[i].animeImg})`;
+                figure.style.backgroundSize = "cover";
+                figure.style.backgroundPosition = "center";
+                
+
+                a.appendChild(figure);
 
                 const figureCaption = document.createElement("figcaption");
-                figureCaption.innerText = elem.animeTitle;
+                figureCaption.innerText = animes[i].animeTitle;
                 figure.appendChild(figureCaption);
 
                 const p = document.createElement("p");
-                p.innerText = elem.animeTitle;
-                liTop.appendChild(p);
-
+                p.innerText = animes[i].animeTitle;
+                a.appendChild(p);
+                liTop.appendChild(a);
                 ulTop.appendChild(liTop);
-            });
+            }
         })
     }
 }

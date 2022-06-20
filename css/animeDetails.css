@@ -187,6 +187,7 @@ body{
     font-size: 26px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
 }
 
 .conteiner-title ul li .subTitle{
@@ -320,23 +321,41 @@ body{
 }
 
 .conteiner-Top ul li{
+    width: 17vw;
+}
+.conteiner-Top ul li a{
     display: flex;
     margin-bottom: 30px;
     align-items: center;
     background-color: #ababab11;
-    width: 95%;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 24px;
 }
 
-.conteiner-Top ul li:hover{
+.conteiner-Top ul li:hover a{
     background-color: #ababab;
     color: #fc0000;
 }
 
-
-.conteiner-Top li img{
-    width: 20%;
-    height: 25%;
+.conteiner-Top li a figure{
+    width: 35%;
+    height: 140px;
     margin-right: 4%;
+    border-radius: 8%;
+}
+
+.conteiner-Top li a p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ababab;
+    width: 150px;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
 }
 
 

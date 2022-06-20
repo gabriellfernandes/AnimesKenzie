@@ -1,7 +1,7 @@
 import { Api } from "./api.js";
-import { button, teste } from "./buttonSide.js";
+import { button, animeDetailsHtml } from "./buttonSide.js";
 
 Api.getAnimes()
 
 button();
-teste()
+animeDetailsHtml()
