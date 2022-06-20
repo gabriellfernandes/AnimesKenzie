@@ -1,24 +1,55 @@
+import { Api } from "./api.js";
+
 export function button(){
-    document.body.addEventListener("click", (e) => {
-    
-     const button = document.getElementsByClassName("lado")
-     const button2 = document.getElementsByClassName("lado1")
-    
-    Array.from(button).forEach((elem, i) => {
-          if(e.target.className == elem.className){
-               const scroll = document.getElementsByClassName("Tip-ul")[i + 1]
-               scroll.style.transition = "0.8s";
-               scroll.scrollLeft -= 250;
-               console.log(scroll)
+     const ul = document.getElementsByClassName("Tip-ul")
+     document.body.addEventListener("click", (e) => {
+          const id = e.target.id.replace(/\D/g, '')
+          if(e.target.className == "lado"){
+               Array.from(ul).forEach((e, i) => {
+                    if(id == ul[i].id)
+                    {
+                         const scroll = document.getElementById(id)
+                         scroll.style.transition = "0.8s";
+                         return scroll.scrollLeft -= 250
+                    }
+               })
           }
-    })
          
-    Array.from(button2).forEach((elem, i) => {
-          if(e.target.className == elem.className){
-               const scroll = document.getElementsByClassName("Tip-ul")[i + 1]
-               scroll.style.transition = "0.8s";
-               return scroll.scrollLeft += 250; 
+          if(e.target.className == "lado1"){
+               Array.from(ul).forEach((e, i) => {
+                    if(id == ul[i].id)
+                    {
+                         const scroll = document.getElementById(id)
+                         scroll.style.transition = "0.8s";
+                         return scroll.scrollLeft += 250
+                    }
+               })
           }
      })
+ }
+ 
+export function teste(){
+     document.body.addEventListener("click", (e) => {
+          e.preventDefault()
+
+          const a = document.getElementsByClassName("Anime-link")
+          for(let i = 0; i < a.length; i++){
+               if(e.target.parentNode.id == a[i].id){
+                    console.log(a[i])
+                    var anime = a[i].childNodes[1].innerText
+                    const time = []
+                    anime = anime.split(" ")
+                    anime.forEach((elem) => {
+                         let oi = elem.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
+                         time.push(oi.replace(":", "").replace("(", "").replace(")", "").toLowerCase())
+                    })
+
+                    localStorage.setItem("anime", time.join("-"))
+                    window.location.href = "./AnimeDetails.html"
+               }
+          }
+         
      })
 }
+
+

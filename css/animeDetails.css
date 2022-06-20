@@ -1,0 +1,494 @@
+body{
+    background-image: url(https://animesup.biz/maou2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.nav{
+    display: flex;
+    width: 99.2vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 40%);
+    border-bottom: 1px solid #000;
+    background-color: #000000d1;
+}
+.conteiner{
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteiner .ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+
+.conteiner .ul .logo{
+    height: 40px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.conteiner .ul .li{
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.conteiner .ul .po{
+    margin-bottom: 5px;
+}
+
+.conteiner .ul .li2{
+    margin-bottom: 32px;
+    padding: 0px 0px;
+    margin-left: 0px;
+    width: 100px;
+}
+
+.conteiner .ul .tamanho{
+    background-color: #000;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    width: 300px;
+    display: flex;
+    transform: matrix(1, 0, 0, 1, 10, 0);
+}
+
+.conteiner .ul .li3{
+    margin-bottom: 18px;
+    padding: 0px 0px;
+    width: 100px;
+}
+.conteiner .ul .tamanho2{
+    width: 300px;
+    padding-left: 20px;
+    display: flex;
+    transform: matrix(1, 0, 0, 1, 10, 0);
+    background-color: #000;
+}
+.conteiner .ul .tamanho .ul2,.conteiner .ul .tamanho2 .ul3{
+    list-style-type: "▸";
+    color: rgba(255, 255, 255, 0.6);
+}
+.conteiner .ul .tamanho .ul2 li{
+    margin-right: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.conteiner .ul .tamanho2 .ul3 li{
+    margin-right: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.conteiner .ul .li a, .li2  a, .li2 summary, .li3 a, .li3 summary{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+.conteiner .ul  .li2 .details1{
+    margin-top: 29px;
+    text-align: center;
+}
+.conteiner .ul  .li3 .details2{
+    width: 80px;
+    margin-top: 17px;
+    text-align: center;
+}
+.conteiner .details1[open], .conteiner .details2[open]{
+    overflow: hidden;
+    height: 20px;
+}
+.conteiner .details1[open]:hover, .conteiner .details2[open]:hover{
+    overflow: visible;
+}
+.conteiner .details1[open] .ul2{
+    padding-top: 29px;
+    display: inline-block;
+}
+.conteiner .details2[open] .ul3{
+    padding-top: 29px;
+    display: inline-block;
+}
+
+/* Parte do hover para mudar de cor*/
+    .conteiner .ul .li2 summary:hover{
+        color: rgb(237, 14, 14);
+        cursor: pointer;
+    }
+    .conteiner .ul .li2 summary::marker{
+        color: #000000d1;
+    }
+    .conteiner .ul .li2 .details1 .tamanho .ul2 li:hover{
+        color: rgb(237, 14, 14);
+    }
+    .conteiner .ul .li2 .details1 .tamanho .ul2 a:hover{
+        color: rgb(237, 14, 14);
+    }
+    
+    .conteiner .ul .li3 summary:hover{
+        color: rgb(237, 14, 14);
+        cursor: pointer;
+    }
+    .conteiner .ul .li3 summary::marker{
+        color: #000000d1;
+    }
+    .conteiner .ul .li3 .details2 .tamanho2 .ul3 li:hover{
+        color: rgb(237, 14, 14);
+    }
+    .conteiner .ul .li3 .details2 .tamanho2 .ul3 a:hover{
+        color: rgb(237, 14, 14);
+    }
+
+    .conteiner .ul .li a:hover{
+        color: rgb(237, 14, 14);
+    }
+
+    .img{
+        height: 25px;
+        width: 25px;
+    }
+
+
+/* Parte do Main*/
+
+.conteiner-Main{
+    width: 85vw;
+    margin-left: 5.2%;
+    background-color: #000000a0;
+    display: flex;
+}
+
+.conteiner-title{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: 0.5px solid #ababab3e;
+    border-left: none;
+    border-top: none;
+    padding: 20px;
+    width: 65vw;
+    padding-left: 100px;
+}
+
+.conteiner-title .img{
+    width: 20%;
+    height: 25%;
+    margin-right: 4%;
+}
+
+.conteiner-title ul li .title{
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.conteiner-title ul li .subTitle{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ababab;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid #ababab3e;
+}
+.conteiner-title .div-genero{
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.conteiner-title .div-genero ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.conteiner-title .div-genero ul li{
+    margin-right: 20px;
+}
+
+.conteiner-title .div-genero ul li span{
+    color: #ababab;
+    cursor: none;
+}
+
+.conteiner-title .ul li{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.conteiner-title .ul span{
+    color: #ababab;
+    font-size: 16px;
+}
+.conteiner-sinopse{
+    width: 65vw;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 40px;
+    border: 0.8px solid #ababab3e;
+    border-left: none;
+}
+
+.conteiner-sinopse h2{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.conteiner-sinopse p{
+    margin-bottom: 20px;
+}
+
+.conteiner-episodio{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 40px;
+    padding-bottom: 20px;
+    border-bottom: 0.8px solid #ababab3e;
+    border-right: 0.8px solid #ababab3e;
+    width: 65vw;
+}
+
+.conteiner-temporada{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.853);
+    padding-left: 40px;
+    padding-bottom: 20px;
+    border-bottom: 0.8px solid #ababab3e;
+    border-right: 0.8px solid #ababab3e;
+    width: 65vw;
+}
+
+.conteiner-temporada h2{
+    margin-bottom: 20px;
+}
+
+.conteiner-temporada li{
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.conteiner-temporada li p{
+    margin-left: 10px;
+    overflow: hidden;
+}
+.conteiner-temporada li:hover p{
+    color: #fc0000;
+}
+.conteiner-temporada span{
+    margin-left: 10px;
+}
+
+.conteiner-temporada li img{
+    width: 20%;
+    height: 20%;
+}
+
+
+
+/* Parte do top anime */
+.conteiner-Top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 40px;
+}
+
+.conteiner-Top h2{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.conteiner-Top ul li{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    background-color: #ababab11;
+    width: 95%;
+}
+
+.conteiner-Top ul li:hover{
+    background-color: #ababab;
+    color: #fc0000;
+}
+
+
+.conteiner-Top li img{
+    width: 20%;
+    height: 25%;
+    margin-right: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+.conteiner-footer{
+    width: 85vw;
+    background-color: #000000a0;
+    margin-left: 5.2%;
+    height: 100%;
+    display: inline-block;
+    margin-bottom: 200px;
+}
+.conteiner-footer .tamanho4{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    padding-left: 120px;
+    padding-right: 120px;
+    box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+}
+
+.conteiner-footer .footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    width: 30vw;
+    margin-right: 80px;
+}
+.conteiner-footer .footer .details12{
+    display: flex;
+    height: 90px;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-left: 20px;
+}
+.conteiner-footer .footer .details12 .ulfooter2{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    width: 200px;
+    flex-wrap: wrap;
+}
+.conteiner-footer .footer .details12 .ulfooter{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.conteiner-footer .footer .details12 summary{
+    
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    cursor:default;
+}
+
+
+.conteiner-footer .footer .details12 summary::marker{
+    background-color: #000000a0;
+    content: "";
+}
+
+.conteiner-footer .footer .details12 li{
+    height: 20px;
+    width: 90px;
+    background-color: #00000068;
+    margin: 5px 5px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.conteiner-footer .footer .details12 li a{
+    color: #fc0000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* sistema de hover */
+.conteiner-footer .footer .details12 li:hover{
+    background-color: #3a393968;
+}
+
+/* outro lado do footer */
+.conteiner-footer .footer-logo img{
+    height: 40px;
+    width: 280px;
+}
+.conteiner-footer .footer-logo{
+    margin: 0 auto;
+    overflow: visible;
+}
+.conteiner-footer .footer-logo figcaption{
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    width: 280px;
+    text-align: center;
+}
+
+/* Parte final */
+.conteiner-footer .tamanho5{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.conteiner-footer .tamanho5 p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+.conteiner-footer .tamanho5 button{
+    height: 35px;
+    width: 35px;
+    border: none;
+    font-size: 18px;
+    background-color: #00000000;
+    border-radius: 8px;
+}
+
+.conteiner-footer .tamanho5 button a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+.conteiner-footer .tamanho5 button:hover a{
+    color: rgb(237, 14, 14);
+}

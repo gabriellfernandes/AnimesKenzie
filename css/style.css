@@ -2,6 +2,7 @@ body{
     background-image: url(https://animesup.biz/maou2.webp);
     background-size: cover;
     margin-bottom: 200px;
+    overflow-x: hidden;
 }
 .nav{
     display: flex;
@@ -190,7 +191,7 @@ body{
 
 /* SubMenu */
     .tamanho-submenu{
-        margin-left: 7.2%;
+        margin-left: 5.2%;
         width: 90vw;
         height: 60px;
         background-color: #000000a0;
@@ -225,7 +226,7 @@ body{
 
 /* main */
     .conteiner-main{
-        margin-left: 7.2%;
+        margin-left: 5.2%;
         width: 90vw;
         height: 100%;
         display: flex;
@@ -256,7 +257,6 @@ body{
         margin-left: 10px;
         display: flex;
         width: 89.5vw;
-        box-shadow: 0px 1px 0px rgba(101, 101, 101, 0.424);
         overflow: auto;
         padding: 0px 2.5%;
         transition: 0.8s;
@@ -279,7 +279,7 @@ body{
         margin-right: 55px;
     }
 
-    .conteiner-main .lancamento ul li a figure{
+    .conteiner-main .lancamento figure{
         height: 259px; 
         width: 185px;
         overflow: hidden;
@@ -324,12 +324,16 @@ body{
     .conteiner-main .lancamento .ul{
         margin-top: 50px;
         display: flex;
-        width: 89.4vw;
+        width: 90.4vw;
+        margin-left: 6%;
         flex-wrap: wrap;
+        overflow: auto;
     }
 
 
-    
+    .conteiner-main .lancamento .ul li{
+        margin-right: 5%
+    }
     
     .lancamento .ul li figure{
         width: 287px;
@@ -376,7 +380,7 @@ body{
     .conteiner-footer{
         width: 90vw;
         background-color: #000000a0;
-        margin-left: 7.2%;
+        margin-left: 5.2%;
         height: 100%;
         display: inline-block;
     }
@@ -537,7 +541,7 @@ body{
     color: rgb(237, 14, 14);
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (max-width: 1350px) {
     .conteiner-main .lancamento .ul li{
         margin-right: 1%;
     }

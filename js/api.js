@@ -1,3 +1,5 @@
+let cont = 1
+
 export class Api {
     static BASE = "https://gogoanime.herokuapp.com"
 
@@ -5,10 +7,9 @@ export class Api {
         const response = await fetch(`${this.BASE}/recent-release`,{});
         
         const date = await response.json();
-        this.getAnimeFilme();
-        this.getTopAnimes();
-        this.getUltimosAnimes();
-        return Card.animesComEpCard(date);
+        
+        
+        return Card.animesComEpCard(date),this.getAnimeFilme(),this.getUltimosAnimes(),this.getTopAnimes();
     }
 
     static async getAnimeFilme(){
@@ -25,6 +26,13 @@ export class Api {
         return Card.topAnimesCard(date);
     }
 
+    static async getTopAnimesItens(){
+        const response = await fetch(`${this.BASE}/popular`,{});
+        
+        const date = await response.json();
+        return date
+    }
+
     static async getUltimosAnimes(){
         const response = await fetch(`${this.BASE}/top-airing`,{});
         
@@ -32,65 +40,46 @@ export class Api {
         return Card.ultimosAnimesCard(date);
     }
 
+    static async getDetails(id){
+        const response = await fetch(`${this.BASE}/anime-details/${id}`,{});
+        
+        const date = await response.json();
+        console.log(date)
+        return Card.animeDetailtCard(date);
+    }
+
 }
 
 class Card{
     static animesLacamentos = document.getElementsByClassName("lancamento")
     
-    static async animesFilmeCard(anime){
-            this.animesLacamentos[1].innerHTML = ""
-            
-            const ul = document.createElement("ul");
-            ul.className = "Tip-ul"
-
-            anime.map((elem) => {
-                const li = document.createElement("li");
-    
-                const a = document.createElement("a");
-                a.href = elem.episodeUrl;
-                a.target = "_blank";
-                li.appendChild(a);
-    
-                const figure = document.createElement("figure");
-                a.appendChild(figure);
-    
-                const img = document.createElement("img");
-                img.src = elem.animeImg
-                img.alt = elem.animeTitle;
-                figure.appendChild(img);
-                    
-                const figureCaption = document.createElement("figcaption");
-                figureCaption.innerText = elem.animeTitle;
-                figure.appendChild(figureCaption);
-    
-                const p = document.createElement("p");
-                p.innerText = elem.animeTitle;
-                li.appendChild(p);
-     
-                ul.appendChild(li);
-            });
-    
-            this.animesLacamentos[1].appendChild(ul);
-    }
-
     static animesComEpCard(anime){
         this.animesLacamentos[0].innerHTML = ""
         
         const ul = document.createElement("ul");
         ul.className = "ul Tip-ul"
         this.animesLacamentos[1].appendChild(ul);
+        ul.id = 0
         
+
         anime.map((elem) => {
             const li = document.createElement("li")
+
+            const a = document.createElement("a")
+            a.href = "#" 
+            a.id = `A${cont}`;
+            a.className = "Anime-link"
+            cont++;
+            li.appendChild(a)
 
             const figure = document.createElement("figure")
             figure.style.backgroundImage = `url(${elem.animeImg})`;
             figure.style.backgroundSize = "cover";
-            li.appendChild(figure)
+            a.appendChild(figure)
         
-            const a = document.createElement("a")
-            a.href = elem.episodeUrl;
-            li.appendChild(a)
+            
+
+           
     
 
             const figureCaption = document.createElement("figcaption")
@@ -115,11 +104,86 @@ class Card{
         this.animesLacamentos[0].appendChild(ul);
     }
 
+    static async animesFilmeCard(anime){
+        this.animesLacamentos[1].innerHTML = ""
+        
+        const ul = document.createElement("ul");
+        ul.className = "Tip-ul"
+        ul.id = 1
+      
+
+        anime.map((elem) => {
+            const li = document.createElement("li");
+
+            const a = document.createElement("a");
+            a.href = elem.episodeUrl;
+            a.target = "_blank";
+            li.appendChild(a);
+
+            const figure = document.createElement("figure");
+            a.appendChild(figure);
+
+            const img = document.createElement("img");
+            img.src = elem.animeImg
+            img.alt = elem.animeTitle;
+            figure.appendChild(img);
+                
+            const figureCaption = document.createElement("figcaption");
+            figureCaption.innerText = elem.animeTitle;
+            figure.appendChild(figureCaption);
+
+            const p = document.createElement("p");
+            p.innerText = elem.animeTitle;
+            li.appendChild(p);
+ 
+            ul.appendChild(li);
+        });
+
+        this.animesLacamentos[1].appendChild(ul);
+    }
+
+    static ultimosAnimesCard(anime){
+        this.animesLacamentos[2].innerHTML = ""
+            
+        const ul = document.createElement("ul");
+        ul.className = "Tip-ul"
+        ul.id = 2
+       
+
+        anime.map((elem) => {
+            const li = document.createElement("li");
+
+            const a = document.createElement("a");
+            a.href = elem.episodeUrl;
+            a.target = "_blank";
+            li.appendChild(a);
+
+            const figure = document.createElement("figure");
+            figure.style.backgroundImage = `url(${elem.animeImg})`;
+            figure.style.backgroundSize = "cover";
+            a.appendChild(figure);
+
+            const figureCaption = document.createElement("figcaption");
+            figureCaption.innerText = elem.animeTitle;
+            figure.appendChild(figureCaption);
+
+            const p = document.createElement("p");
+            p.innerText = elem.animeTitle;
+            li.appendChild(p);
+ 
+            ul.appendChild(li);
+        });
+
+        this.animesLacamentos[2].appendChild(ul);
+    }
+
     static topAnimesCard(anime){
         this.animesLacamentos[3].innerHTML = ""
             
         const ul = document.createElement("ul");
         ul.className = "Tip-ul"
+        ul.id = 3
+        
 
         anime.map((elem) => {
             const li = document.createElement("li");
@@ -148,37 +212,169 @@ class Card{
         this.animesLacamentos[3].appendChild(ul);
     }
 
-    static ultimosAnimesCard(anime){
-        this.animesLacamentos[2].innerHTML = ""
-            
+    static animeDetailtCard(anime){
+        const conteinerMain2 = document.getElementsByClassName("conteiner-Main2")[0];
+        const divTitle = document.createElement("div");
+        divTitle.className = "conteiner-title"
+        conteinerMain2.appendChild(divTitle);
+
+        const img = document.createElement("img");
+        img.src = anime.animeImg;
+        img.alt = anime.animeTitle;
+        img.className = "img"
+        divTitle.appendChild(img);
+
         const ul = document.createElement("ul");
-        ul.className = "Tip-ul"
+        divTitle.appendChild(ul);
 
-        anime.map((elem) => {
-            const li = document.createElement("li");
+        const li = document.createElement("li");
+        const p = document.createElement("p");
+        p.innerText = anime.animeTitle;
+        p.className = "title"
+        li.appendChild(p);
+        ul.appendChild(li);
 
-            const a = document.createElement("a");
-            a.href = elem.episodeUrl;
-            a.target = "_blank";
-            li.appendChild(a);
+        const li2 = document.createElement("li");
+        const p2 = document.createElement("p");
+        p2.innerText = anime.otherNames;
+        p2.className = "subtitle"
+        li2.appendChild(p2);
+        ul.appendChild(li2);
 
-            const figure = document.createElement("figure");
-            figure.style.backgroundImage = `url(${elem.animeImg})`;
-            figure.style.backgroundSize = "cover";
-            a.appendChild(figure);
+        const div = document.createElement("div");
+        ul.appendChild(div);
+        
+        const divgenero = document.createElement("div");
+        divgenero.className = "div-genero"
+        div.appendChild(divgenero);
+        
+        const genero = document.createElement("h2");
+        genero.innerText = "Gênero";
+        divgenero.appendChild(genero);
 
-            const figureCaption = document.createElement("figcaption");
-            figureCaption.innerText = elem.animeTitle;
-            figure.appendChild(figureCaption);
-
-            const p = document.createElement("p");
-            p.innerText = elem.animeTitle;
-            li.appendChild(p);
- 
-            ul.appendChild(li);
+        const ulGenero = document.createElement("ul");
+        divgenero.appendChild(ulGenero);
+        
+        anime.genres.map((elem) => {
+            const liGenero = document.createElement("li");
+            liGenero.innerText = elem;
+            ulGenero.appendChild(liGenero);
         });
 
-        this.animesLacamentos[2].appendChild(ul);
+        const ulDescription = document.createElement("ul");
+        ulDescription.className = "ul"
+        div.appendChild(ulDescription);
+
+        const liDescription = document.createElement("li");
+        const pDescription = document.createElement("p");
+        pDescription.innerText = `Ano: `;
+        liDescription.appendChild(pDescription);
+        ulDescription.appendChild(liDescription);
+        
+        const span = document.createElement("span");
+        span.innerText = anime.releasedDate;
+        pDescription.appendChild(span);
+
+        const liDescription2 = document.createElement("li");
+        const pDescription2 = document.createElement("p");
+        pDescription2.innerText = `Episódios: `;
+        liDescription2.appendChild(pDescription2);
+        ulDescription.appendChild(liDescription2);
+
+        const span2 = document.createElement("span");
+        span2.innerText = anime.totalEpisodes;
+        pDescription2.appendChild(span2);
+
+        const liDescription3 = document.createElement("li");
+        const pDescription3 = document.createElement("p");
+        pDescription3.innerText = `Status: `;
+        liDescription3.appendChild(pDescription3);
+        ulDescription.appendChild(liDescription3);
+
+        const span3 = document.createElement("span");
+        span3.innerText = anime.status;
+        pDescription3.appendChild(span3);
+
+        const divContainersinopse = document.createElement("div");
+        divContainersinopse.className = "conteiner-sinopse";
+        conteinerMain2.appendChild(divContainersinopse);
+
+        const sinopse = document.createElement("h2");
+        sinopse.innerText = "Sinopse";
+        divContainersinopse.appendChild(sinopse);
+
+        const pSinopse = document.createElement("p");
+        pSinopse.innerText = anime.synopsis;
+        divContainersinopse.appendChild(pSinopse);
+
+        const divContainerEpisodio = document.createElement("div");
+        divContainerEpisodio.className = "conteiner-episodio";
+        conteinerMain2.appendChild(divContainerEpisodio);
+
+        const episodio = document.createElement("P");
+        episodio.innerText = "Indisponivel Ainda";
+        divContainerEpisodio.appendChild(episodio);
+
+        const divContainerTemporada = document.createElement("div");
+        divContainerTemporada.className = "conteiner-temporada";
+        conteinerMain2.appendChild(divContainerTemporada);
+
+        const temporada = document.createElement("h2");
+        temporada.innerText = "Episódios";
+        divContainerTemporada.appendChild(temporada);
+
+        const ulTemporada = document.createElement("ul");
+        divContainerTemporada.appendChild(ulTemporada);
+
+        anime.episodesList.map((elem) => {
+            const liTemporada = document.createElement("li");
+            const img = document.createElement("img");
+            img.src = "./img/episodio.jpg";
+            img.alt = "Episódio";
+            liTemporada.appendChild(img);
+
+            const p = document.createElement("p");
+            p.innerText = `1 - ${elem.episodeNum}`;
+            liTemporada.appendChild(p);
+
+            const span = document.createElement("span");
+            span.innerText = "|";
+            liTemporada.appendChild(span);
+
+            const p2 = document.createElement("p");
+            p2.innerText = elem.episodeId.replace(/-/g, " ");
+            liTemporada.appendChild(p2);
+            ulTemporada.appendChild(liTemporada);
+        });
+
+        const divConteinerTop = document.getElementsByClassName("conteiner-Top")[0];
+        const h2Top = document.createElement("h2");
+        h2Top.innerText = "Top Animes";
+        divConteinerTop.appendChild(h2Top);
+
+        const ulTop = document.createElement("ul");
+        divConteinerTop.appendChild(ulTop);
+
+        Api.getTopAnimesItens().then((animes) => {
+            animes.map((elem) => {
+                const liTop = document.createElement("li");
+               
+                const figure = document.createElement("img");
+                figure.src = elem.animeImg;
+                figure.alt = elem.animeTitle;
+                liTop.appendChild(figure);
+
+                const figureCaption = document.createElement("figcaption");
+                figureCaption.innerText = elem.animeTitle;
+                figure.appendChild(figureCaption);
+
+                const p = document.createElement("p");
+                p.innerText = elem.animeTitle;
+                liTop.appendChild(p);
+
+                ulTop.appendChild(liTop);
+            });
+        })
     }
 }
 
