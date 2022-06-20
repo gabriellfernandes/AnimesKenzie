@@ -289,6 +289,9 @@ body{
     margin-left: 10px;
     overflow: hidden;
 }
+.conteiner-temporada li .p-episodio{
+    width: 70%;
+}
 .conteiner-temporada li:hover p{
     color: #fc0000;
 }

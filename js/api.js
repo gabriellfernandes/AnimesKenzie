@@ -360,6 +360,7 @@ class Card{
 
             const p2 = document.createElement("p");
             p2.innerText = elem.episodeId.replace(/-/g, " ");
+            p2.className = "p-episodio"
             liTemporada.appendChild(p2);
             ulTemporada.appendChild(liTemporada);
         });
