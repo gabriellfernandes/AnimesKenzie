@@ -1,6 +1,7 @@
 body{
-    background-size:  contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     overflow-x: hidden;
 }
 .nav{
@@ -30,8 +31,8 @@ body{
 }
 
 .conteiner .ul .logo{
-    height: 60px;
-    width: 300px;
+    height: 40px;
+    width: 250px;
     margin-bottom: 5px;
 }
 
@@ -60,13 +61,11 @@ body{
     transform: matrix(1, 0, 0, 1, 10, 0);
 }
 
-
 .conteiner .ul .li3{
     margin-bottom: 18px;
     padding: 0px 0px;
     width: 100px;
 }
-
 .conteiner .ul .tamanho2{
     width: 300px;
     padding-left: 20px;
@@ -91,7 +90,6 @@ body{
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
-
 .conteiner .ul  .li2 .details1{
     margin-top: 29px;
     text-align: center;
@@ -104,7 +102,6 @@ body{
 .conteiner .details1[open], .conteiner .details2[open]{
     overflow: hidden;
     height: 20px;
-    
 }
 .conteiner .details1[open]:hover, .conteiner .details2[open]:hover{
     overflow: visible;
@@ -112,8 +109,6 @@ body{
 .details1[open]:hover  .tamanho, .conteiner .details2[open]:hover .tamanho2{
     background-color: rgba(0, 0, 0, 0.813);
 }
-
-
 .conteiner .details1[open] .ul2{
     padding-top: 29px;
     display: inline-block;
@@ -125,191 +120,41 @@ body{
 
 /* Parte do hover para mudar de cor*/
     .conteiner .ul .li2 summary:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
         cursor: pointer;
     }
     .conteiner .ul .li2 summary::marker{
         color: #000000d1;
     }
     .conteiner .ul .li2 .details1 .tamanho .ul2 li:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
     }
     .conteiner .ul .li2 .details1 .tamanho .ul2 a:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
     }
     
     .conteiner .ul .li3 summary:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
         cursor: pointer;
     }
     .conteiner .ul .li3 summary::marker{
         color: #000000d1;
     }
     .conteiner .ul .li3 .details2 .tamanho2 .ul3 li:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
     }
     .conteiner .ul .li3 .details2 .tamanho2 .ul3 a:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
     }
 
     .conteiner .ul .li a:hover{
-        color: #0096c7;
+        color: rgb(237, 14, 14);
     }
 
     .img{
         height: 25px;
         width: 25px;
     }
-
-
-/* Parte do Main*/
-
-.conteiner-Main{
-    width: 85vw;
-    margin-left: 5.2%;
-    background-color: #000000a0;
-    display: flex;
-}
-
-.conteiner-title{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    border: 0.5px solid #ababab3e;
-    border-left: none;
-    border-top: none;
-    padding: 20px;
-    width: 65vw;
-    padding-left: 100px;
-}
-
-.conteiner-title .img{
-    width: 20%;
-    height: 25%;
-    margin-right: 4%;
-}
-
-.conteiner-title ul li .title{
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 10px;
-}
-
-.conteiner-title ul li .subTitle{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    color: #ababab;
-    font-weight: 400;
-    margin-bottom: 20px;
-    border-bottom: 0.5px solid #ababab3e;
-}
-.conteiner-title .div-genero{
-    display: flex;
-    margin-bottom: 20px;
-    font-size: 12px;
-    font-weight: 400;
-}
-.conteiner-title .div-genero ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.conteiner-title .div-genero ul li{
-    margin-right: 20px;
-}
-
-.conteiner-title .div-genero ul li span{
-    color: #ababab;
-    cursor: none;
-}
-
-.conteiner-title .ul li{
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.conteiner-title .ul span{
-    color: #ababab;
-    font-size: 16px;
-}
-.conteiner-sinopse{
-    width: 65vw;
-    color: rgba(255, 255, 255, 0.6);
-    padding-left: 40px;
-    border: 0.8px solid #ababab3e;
-    border-left: none;
-}
-
-.conteiner-sinopse h2{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.conteiner-sinopse p{
-    margin-bottom: 20px;
-}
-
-.conteiner-episodio{
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
-    padding-left: 40px;
-    padding-bottom: 20px;
-    border-bottom: 0.8px solid #ababab3e;
-    border-right: 0.8px solid #ababab3e;
-    width: 65vw;
-}
-
-.conteiner-temporada{
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.853);
-    padding-left: 40px;
-    padding-bottom: 20px;
-    border-bottom: 0.8px solid #ababab3e;
-    border-right: 0.8px solid #ababab3e;
-    width: 65vw;
-}
-
-.conteiner-temporada h2{
-    margin-bottom: 20px;
-}
-
-.conteiner-temporada li{
-    display: flex;
-    margin-bottom: 40px;
-    align-items: center;
-}
-
-.conteiner-temporada li p{
-    margin-left: 10px;
-    overflow: hidden;
-}
-.conteiner-temporada li .p-episodio{
-    width: 70%;
-}
-.conteiner-temporada li:hover p{
-    color: #0096c7;
-}
-.conteiner-temporada span{
-    margin-left: 10px;
-}
-
-.conteiner-temporada li img{
-    width: 20%;
-    height: 20%;
-}
-
 
 
 /* Parte do top anime */
@@ -343,8 +188,8 @@ body{
 }
 
 .conteiner-Top ul li:hover a{
-    background-color: #ababab6f;
-    color: #caf0f8;
+    background-color: #ababab;
+    color: #fc0000;
 }
 
 .conteiner-Top li a figure{
@@ -358,7 +203,7 @@ body{
     font-size: 16px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    color: #caf0f8;
+    color: #ababab;
     width: 150px;
     height: 20px;
     text-overflow: ellipsis;
@@ -366,23 +211,6 @@ body{
     overflow: hidden;
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 
@@ -462,7 +290,7 @@ body{
 }
 
 .conteiner-footer .footer .details12 li a{
-    color: #0096c7;
+    color: #fc0000;
     font-size: 14px;
     text-decoration: none;
 }
@@ -471,7 +299,6 @@ body{
 .conteiner-footer .footer .details12 li:hover{
     background-color: #3a393968;
 }
-
 
 /* outro lado do footer */
 .conteiner-footer .footer-logo img{
@@ -519,5 +346,5 @@ body{
 }
 
 .conteiner-footer .tamanho5 button:hover a{
-    color: #0096c7;
+    color: rgb(237, 14, 14);
 }

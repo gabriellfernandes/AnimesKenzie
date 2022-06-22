@@ -40,8 +40,7 @@ export function animeDetailsHtml(){
                     const time = []
                     anime = anime.split(" ")
                     anime.forEach((elem) => {
-                         let oi = elem.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
-                         time.push(oi.replace(":", "").replace("(", "").replace(")", "").replace(",", "").toLowerCase())
+                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
                     })
 
                     localStorage.setItem("anime", time.join("-"))
@@ -64,11 +63,13 @@ export function animeEpisodio(){
                     const time = []
                     anime = anime.split(" ")
                     anime.forEach((elem) => {
-                         let oi = elem.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
-                         time.push(oi.replace(":", "").replace("(", "").replace(")", "").replace(",", "").toLowerCase())
+                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
                     })
-
+                    localStorage.setItem("episodio", time.join("-"))
+                    console.log(time.join("-"))
+                    window.location.href = "./episodio.html"
                     return Api.getEpisodiosWatch(time.join("-"))
+                    
                }
           }
          

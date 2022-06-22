@@ -44,14 +44,23 @@ export class Api {
         const response = await fetch(`${this.BASE}/anime-details/${id}`,{});
         
         const date = await response.json();
-        console.log(date)
-        return Card.animeDetailtCard(date);
+        Card.animeDetailtCard(date)
+        return date;
+    }
+
+    static async getDetailsUn(id){
+        const response = await fetch(`${this.BASE}/anime-details/${id}`,{});
+        
+        const date = await response.json();
+
+        return date;
     }
 
     static async getEpisodiosWatch(id){
-        const response = await fetch(`${this.BASE}/vidcdn/watch/${id}`,{});
+        const response = await fetch(`${this.BASE}/fembed/watch/${id}`,{});
         
         const date = await response.json();
+    
         return console.log(date)
     }
 }

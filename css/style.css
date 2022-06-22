@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://animesup.biz/maou2.webp);
+    background-image: url(../img/Backgorund.png);
     background-size: cover;
     margin-bottom: 200px;
     overflow-x: hidden;
@@ -50,7 +50,6 @@ body{
     width: 100px;
 }
 .conteiner .ul .tamanho{
-    background-color: #000;
     padding-left: 20px;
     margin-bottom: 20px;
     padding: 0px 20px;
@@ -68,7 +67,7 @@ body{
     padding-left: 20px;
     display: flex;
     transform: matrix(1, 0, 0, 1, 10, 0);
-    background-color: #000;
+
 }
 .conteiner .ul .tamanho .ul2,.conteiner .ul .tamanho2 .ul3{
     list-style-type: "▸";
@@ -104,6 +103,9 @@ body{
 .conteiner .details1[open]:hover, .conteiner .details2[open]:hover{
     overflow: visible;
 }
+.details1[open]:hover  .tamanho, .conteiner .details2[open]:hover .tamanho2{
+    background-color: rgba(0, 0, 0, 0.813);
+}
 .conteiner .details1[open] .ul2{
     padding-top: 29px;
     display: inline-block;
@@ -115,35 +117,35 @@ body{
 
 /* Parte do hover para mudar de cor*/
     .conteiner .ul .li2 summary:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
         cursor: pointer;
     }
     .conteiner .ul .li2 summary::marker{
         color: #000000d1;
     }
     .conteiner .ul .li2 .details1 .tamanho .ul2 li:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
     .conteiner .ul .li2 .details1 .tamanho .ul2 a:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
     
     .conteiner .ul .li3 summary:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
         cursor: pointer;
     }
     .conteiner .ul .li3 summary::marker{
         color: #000000d1;
     }
     .conteiner .ul .li3 .details2 .tamanho2 .ul3 li:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
     .conteiner .ul .li3 .details2 .tamanho2 .ul3 a:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
 
     .conteiner .ul .li a:hover{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
 
 /* Pesquisa */
@@ -210,7 +212,7 @@ body{
     }
     .submenu .ul5 li:hover{
         cursor: pointer;
-        background-color: rgb(237, 14, 14);
+        background-color: #0096c7;
     }
     
     .submenu .ul5 li a{
@@ -246,7 +248,7 @@ body{
     }
 
     .conteiner-main .border{
-        border-bottom: 3px solid rgb(237, 14, 14);
+        border-bottom: 3px solid #0096c7;
         width: 75px;
         margin-top: 20px;
         margin-left: 101px;
@@ -309,7 +311,7 @@ body{
     }
     
     .conteiner-main .lancamento li:hover p{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
 
 /* Adicionado Recentes */
@@ -452,7 +454,7 @@ body{
     }
 
     .conteiner-footer .footer .details12 li a{
-        color: #fc0000;
+        color: #0096c7;
         font-size: 14px;
         text-decoration: none;
     }
@@ -508,7 +510,7 @@ body{
     }
 
     .conteiner-footer .tamanho5 button:hover a{
-        color: rgb(237, 14, 14);
+        color: #0096c7;
     }
 
 
@@ -524,7 +526,7 @@ body{
 
 .lado:hover{
     cursor: pointer;
-    color: rgb(237, 14, 14);
+    color: #0096c7;
 }
 
 .lado1{
@@ -538,7 +540,7 @@ body{
 
 .lado1:hover{
     cursor: pointer;
-    color: rgb(237, 14, 14);
+    color: #0096c7;
 }
 
 @media screen and (max-width: 1350px) {
