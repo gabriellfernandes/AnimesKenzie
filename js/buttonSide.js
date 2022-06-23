@@ -54,7 +54,6 @@ export function animeDetailsHtml(){
 
 export function animeEpisodio(){
      document.body.addEventListener("click", (e) => {
-          
           const a = document.getElementsByClassName("episodio-Link")
           for(let i = 0; i < a.length; i++){
                if(e.target.parentNode.id == a[i].id){
@@ -68,6 +67,7 @@ export function animeEpisodio(){
                     localStorage.setItem("episodio", time.join("-"))
                     console.log(time.join("-"))
                     Api.getEpisodiosWatch(time.join("-"))
+                    console.log(time.join("-"))
                     return window.location.href = "./episodio.html"
                     
                }
@@ -75,3 +75,29 @@ export function animeEpisodio(){
          
      })
 }
+
+
+export function animeRecente(){
+     document.body.addEventListener("click", (e) => {
+          const a = document.getElementsByClassName("Anime-linkRecent")
+          for(let i = 0; i < a.length; i++){
+               if(e.target.parentNode.id == a[i].id){
+                    e.preventDefault()
+                    console.log(a[i])
+                    let anime = a[i].childNodes[1].innerText
+                    let ep = a[i].childNodes[2].innerText
+                    ep = ep.replace(/[^0-9]/g,'')
+                    const time = []
+                    anime = anime.split(" ")
+                    anime.forEach((elem) => {
+                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
+                    })
+                    localStorage.setItem("anime", time.join("-"))
+                    localStorage.setItem("episodio", time.join("-") + "-episode-" + ep)
+                    window.location.href = "./episodio.html"
+               }
+          }
+         
+     })
+}
+animeRecente()

@@ -102,7 +102,7 @@ class Card{
             a.href = "#" 
             a.href = "#";
             a.id = `A${cont}`
-            a.className = "Anime-link"
+            a.className = "Anime-linkRecent"
             cont++;
             
             li.appendChild(a)
@@ -148,7 +148,10 @@ class Card{
             const li = document.createElement("li");
 
             const a = document.createElement("a");
-            a.href = "#";
+            a.href = "#"; 
+            a.id = `A${cont}`
+            a.className = "Anime-link"
+            cont++;
            
             li.appendChild(a);
 
@@ -375,6 +378,8 @@ class Card{
             const img = document.createElement("img");
             img.src = anime.animeImg;
             img.alt = "Episódio";
+            img.style.width = "140px";
+            img.style.height = "180px";
             liTemporada.appendChild(img);
 
             const p = document.createElement("p");
@@ -458,15 +463,20 @@ class Card{
 
             
             const title = document.createElement("h1");
-            title.innerText = `Title: ${anime.animeTitle}`;
+            title.innerText = `${anime.animeTitle}`;
             title.className = "title";
             liTitle.appendChild(title);
             
             const subTitle = document.createElement("h3");
-            subTitle.innerText = `SubTitle: ${anime.otherNames}`;
+            subTitle.innerText = `${anime.otherNames}`;
             subTitle.className = "subTitle";
             liTitle.appendChild(subTitle);
 
+            const episodio = document.createElement("h3");
+            const episodioNumber = localStorage.getItem("episodio").split("-")
+            episodio.innerText = `Episódio: ${episodioNumber[episodioNumber.length - 1].replace(/[^0-9]/g,'')}`;
+            episodio.className = "Title"
+            liTitle.appendChild(episodio);
             const img = document.createElement("img");
             img.src = anime.animeImg;
             img.alt = "Anime";
@@ -504,7 +514,7 @@ class Card{
                 liTemporada.appendChild(img);
 
                 const p = document.createElement("p");
-                p.innerText = `1 - ${elem.episodeNum}`;
+                p.innerText = `${elem.episodeNum}`;
                 liTemporada.appendChild(p);
 
                 const span = document.createElement("span");
