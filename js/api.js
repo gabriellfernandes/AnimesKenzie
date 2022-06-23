@@ -70,7 +70,9 @@ export class Api {
         const date = await response.json();
 
         const video = document.getElementById("video")
-        return video.src = date.headers.Referer
+        
+        video.src = date.Referer
+        return video.style.height = "578px"
     }
 
     static async getEpisodiosWatchServT(id){
@@ -79,7 +81,17 @@ export class Api {
         const date = await response.json();
         
         const video = document.getElementById("video")
-        return video.src = date.headers.Referer
+        
+        return video.src = date.headers.Referer, video.style.height = "720px";
+    }
+
+    static async getEpisodiosWatchServP(id){
+        const response = await fetch(`${this.BASE}/fembed/watch/${id}`,{});
+        
+        const date = await response.json();
+        
+        const video = document.getElementById("video")
+        return video.src = date.headers.Referer , video.style.height = "720px";
     }
 }
 
@@ -444,8 +456,8 @@ class Card{
         const iframe = document.createElement("iframe");
         iframe.allowFullscreen = true;
         iframe.src = anim.Referer;
-        iframe.width = "1024";
-        iframe.height = "720";
+        iframe.width = "1024px";
+        iframe.height = "720px";
         iframe.frameborder="0" 
         iframe.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.id = "video"
