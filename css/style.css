@@ -1,8 +1,11 @@
 body{
-    background-image: url(../img/Backgorund.png);
-    background-size: cover;
-    margin-bottom: 200px;
+    background-image: url(../img/Backgorund.jpg);
     overflow-x: hidden;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .nav{
     display: flex;

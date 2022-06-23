@@ -40,7 +40,7 @@ export function animeDetailsHtml(){
                     const time = []
                     anime = anime.split(" ")
                     anime.forEach((elem) => {
-                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
+                         time.push(elem.replace(/[^-\w\s]/gi, "").toLowerCase())
                     })
 
                     localStorage.setItem("anime", time.join("-"))
@@ -62,7 +62,7 @@ export function animeEpisodio(){
                     const time = []
                     anime = anime.split(" ")
                     anime.forEach((elem) => {
-                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
+                         time.push(elem.replace(/[^-\w\s]/gi, "").toLowerCase())
                     })
                     localStorage.setItem("episodio", time.join("-"))
                     console.log(time.join("-"))
@@ -90,7 +90,7 @@ export function animeRecente(){
                     const time = []
                     anime = anime.split(" ")
                     anime.forEach((elem) => {
-                         time.push(elem.replace(/[^\w\s]/gi, "").toLowerCase())
+                         time.push(elem.replace(/[^-\w\s]/gi, "").toLowerCase())
                     })
                     localStorage.setItem("anime", time.join("-"))
                     localStorage.setItem("episodio", time.join("-") + "-episode-" + ep)
