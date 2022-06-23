@@ -67,8 +67,8 @@ export function animeEpisodio(){
                     })
                     localStorage.setItem("episodio", time.join("-"))
                     console.log(time.join("-"))
-                    window.location.href = "./episodio.html"
-                    return Api.getEpisodiosWatch(time.join("-"))
+                    Api.getEpisodiosWatch(time.join("-"))
+                    return window.location.href = "./episodio.html"
                     
                }
           }
