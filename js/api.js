@@ -1,7 +1,7 @@
 let cont = 1
 let cont2 = 1
 export class Api {
-    static BASE = "https://gogoanime.herokuapp.com"
+    static BASE = "https://gabriellf.herokuapp.com"
 
     static async getAnimes(){
         const response = await fetch(`${this.BASE}/recent-release`,{});
