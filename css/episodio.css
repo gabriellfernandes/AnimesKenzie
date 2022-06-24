@@ -16,7 +16,7 @@ body{
     align-items: center;
     box-shadow: 0 1px 5px rgb(0 0 0 / 40%);
     border-bottom: 1px solid #000;
-    background-color: #000000d1;
+    background-color: #000000b2;
 }
 .conteiner{
     width: 1200px;
@@ -171,7 +171,7 @@ body{
 .conteiner-Main{
     width: 85vw;
     margin-left: 5.2%;
-    background-color: #000000a0;
+    background-color: #000000d1;
     display: flex;
 }
 .conteiner-Main2 button{
@@ -425,7 +425,7 @@ body{
 
 .conteiner-footer{
     width: 85vw;
-    background-color: #000000a0;
+    background-color: #000000d1;
     margin-left: 5.2%;
     height: 100%;
     display: inline-block;
@@ -485,7 +485,7 @@ body{
 
 
 .conteiner-footer .footer .details12 summary::marker{
-    background-color: #000000a0;
+    background-color: #000000d1;
     content: "";
 }
 
