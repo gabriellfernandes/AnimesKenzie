@@ -1,6 +1,6 @@
 let cont = 1
 let cont2 = 1
-let cont3 = 1
+
 export class Api {
     static BASE = "https://gabriellf.herokuapp.com"
 
@@ -26,7 +26,6 @@ export class Api {
                 return null
             }
         })
-        console.log(dub)
         return Card.animesFilmeCard(dub);
     }
 
@@ -148,7 +147,7 @@ class Card{
             a.appendChild(p)
     
             const p2 = document.createElement("p")
-            p2.innerText = `Episódio ${elem.episodeNum}`;
+            p2.innerText = `Episodes ${elem.episodeNum}`;
             p2.className = "p2 " + "p3"
             a.appendChild(p2)
     
@@ -172,9 +171,9 @@ class Card{
 
             const a = document.createElement("a");
             a.href = "#"; 
-            a.id = `A${cont3}`
+            a.id = `A${cont}`
             a.className = "Anime-link12"
-            cont3++;
+            cont++;
            
             li.appendChild(a);
 
@@ -302,7 +301,7 @@ class Card{
 
         const li2 = document.createElement("li");
         const p2 = document.createElement("p");
-        p2.innerText = `Titulo Original: ${anime.otherNames}`;
+        p2.innerText = `Original Title: ${anime.otherNames}`;
         p2.className = "subTitle"
         li2.appendChild(p2);
         ul.appendChild(li2);
@@ -315,7 +314,7 @@ class Card{
         div.appendChild(divgenero);
         
         const genero = document.createElement("h2");
-        genero.innerText = "Gênero";
+        genero.innerText = "Genre";
         divgenero.appendChild(genero);
 
         const ulGenero = document.createElement("ul");
@@ -333,7 +332,7 @@ class Card{
 
         const liDescription = document.createElement("li");
         const pDescription = document.createElement("p");
-        pDescription.innerText = `Ano: `;
+        pDescription.innerText = `Year: `;
         liDescription.appendChild(pDescription);
         ulDescription.appendChild(liDescription);
         
@@ -358,7 +357,7 @@ class Card{
         ulDescription.appendChild(liDescription3);
 
         const span3 = document.createElement("span");
-        span3.innerText = anime.status == "Ongoing"? "Em andamento": "Finalizado";
+        span3.innerText = anime.status == "Ongoing"? "In progress": "Finished";
         pDescription3.appendChild(span3);
 
         const divContainersinopse = document.createElement("div");
@@ -366,7 +365,7 @@ class Card{
         conteinerMain2.appendChild(divContainersinopse);
 
         const sinopse = document.createElement("h2");
-        sinopse.innerText = "Sinopse";
+        sinopse.innerText = "Synopsis";
         divContainersinopse.appendChild(sinopse);
 
         const pSinopse = document.createElement("p");
@@ -377,16 +376,12 @@ class Card{
         divContainerEpisodio.className = "conteiner-episodio";
         conteinerMain2.appendChild(divContainerEpisodio);
 
-        const episodio = document.createElement("P");
-        episodio.innerText = "Indisponivel Ainda";
-        divContainerEpisodio.appendChild(episodio);
-
         const divContainerTemporada = document.createElement("div");
         divContainerTemporada.className = "conteiner-temporada";
         conteinerMain2.appendChild(divContainerTemporada);
 
         const temporada = document.createElement("h2");
-        temporada.innerText = "Episódios";
+        temporada.innerText = "Episodes";
         divContainerTemporada.appendChild(temporada);
 
         const ulTemporada = document.createElement("ul");
@@ -400,7 +395,7 @@ class Card{
 
             const img = document.createElement("img");
             img.src = anime.animeImg;
-            img.alt = "Episódio";
+            img.alt = "Episodes";
             img.style.width = "140px";
             img.style.height = "180px";
             liTemporada.appendChild(img);
@@ -497,7 +492,7 @@ class Card{
 
             const episodio = document.createElement("h3");
             const episodioNumber = localStorage.getItem("episodio").split("-")
-            episodio.innerText = `Episódio: ${episodioNumber[episodioNumber.length - 1].replace(/[^0-9]/g,'')}`;
+            episodio.innerText = `Episodes: ${episodioNumber[episodioNumber.length - 1].replace(/[^0-9]/g,'')}`;
             episodio.className = "Title"
             liTitle.appendChild(episodio);
             const img = document.createElement("img");
@@ -514,7 +509,7 @@ class Card{
             conteinerMain2.appendChild(divContainerTemporada);
 
             const temporada = document.createElement("h2");
-            temporada.innerText = "Episódios";
+            temporada.innerText = "Episodes";
             divContainerTemporada.appendChild(temporada);
 
             const ulTemporada = document.createElement("ul");
@@ -531,7 +526,7 @@ class Card{
 
                 const img = document.createElement("img");
                 img.src = anime.animeImg;
-                img.alt = "Episódio";
+                img.alt = "Episodes";
                 img.style.width = "140px";
                 img.style.height = "180px";
                 liTemporada.appendChild(img);
