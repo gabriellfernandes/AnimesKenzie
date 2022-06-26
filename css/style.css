@@ -200,9 +200,20 @@ body{
         width: 90vw;
         height: 60px;
         background-color: #000000d1;
-        overflow: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
         box-shadow: 0px 2px 3px rgba(101, 101, 101, 0.424);
     }
+
+    .tamanho-submenu::-webkit-scrollbar-track{
+        display: none;
+    }
+
+    .tamanho-submenu::-webkit-scrollbar{
+        display: none;
+    }
+
+
     .submenu .ul5{
         display: flex;
         justify-content: space-around;
@@ -549,5 +560,16 @@ body{
 @media screen and (max-width: 1350px) {
     .conteiner-main .lancamento .ul li{
         margin-right: 1%;
+    }
+    .conteiner-main .lancamento ul{
+        padding: 0;
+    }
+    .conteiner-footer .footer{
+        
+        justify-content: center;
+        align-items: center;
+    }
+    .conteiner-footer .footer{
+        display: none;
     }
   }

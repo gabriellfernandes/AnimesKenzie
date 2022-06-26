@@ -51,6 +51,29 @@ export function animeDetailsHtml(){
      })
 }
 
+export function animeDetailsHtmlFilme(){
+     document.body.addEventListener("click", (e) => {
+          
+          const a = document.getElementsByClassName("Anime-link12")
+          for(let i = 0; i < a.length; i++){
+               if(e.target.parentNode.id == a[i].id){
+                    e.preventDefault()
+                    console.log(a[i])
+                    let anime = a[i].childNodes[1].innerText
+                    const time = []
+                    anime = anime.split(" ")
+                    anime.forEach((elem) => {
+                         time.push(elem.replace(/[^-\w\s]/gi, "").toLowerCase())
+                    })
+
+                    localStorage.setItem("anime", time.join("-")+"-dub")
+                    window.location.href = "./AnimeDetails.html"
+               }
+          }
+         
+     })
+}
+
 
 export function animeEpisodio(){
      document.body.addEventListener("click", (e) => {
@@ -100,4 +123,6 @@ export function animeRecente(){
          
      })
 }
+
 animeRecente()
+animeDetailsHtmlFilme()

@@ -1,5 +1,6 @@
 let cont = 1
 let cont2 = 1
+let cont3 = 1
 export class Api {
     static BASE = "https://gabriellf.herokuapp.com"
 
@@ -13,10 +14,20 @@ export class Api {
     }
 
     static async getAnimeFilme(){
-        const response = await fetch(`${this.BASE}/anime-movies`,{});
+        const response = await fetch(`${this.BASE}/popular`,{
+            subOrDub: "Dub"
+        });
         
         const date = await response.json();
-        return Card.animesFilmeCard(date);
+        const dub = date.map(item => {
+            if(item.subOrDub = "Dub"){
+                return item
+            }else{
+                return null
+            }
+        })
+        console.log(dub)
+        return Card.animesFilmeCard(dub);
     }
 
     static async getTopAnimes(){
@@ -161,9 +172,9 @@ class Card{
 
             const a = document.createElement("a");
             a.href = "#"; 
-            a.id = `A${cont}`
-            a.className = "Anime-link"
-            cont++;
+            a.id = `A${cont3}`
+            a.className = "Anime-link12"
+            cont3++;
            
             li.appendChild(a);
 
