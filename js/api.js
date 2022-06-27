@@ -342,7 +342,7 @@ class Card{
 
         const liDescription2 = document.createElement("li");
         const pDescription2 = document.createElement("p");
-        pDescription2.innerText = `Episódios: `;
+        pDescription2.innerText = `Episodes: `;
         liDescription2.appendChild(pDescription2);
         ulDescription.appendChild(liDescription2);
 
