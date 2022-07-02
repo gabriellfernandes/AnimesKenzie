@@ -1,5 +1,5 @@
-import { Api } from "../api.js"
-import { animeDetailsHtml, animeEpisodio } from "../buttonSide.js";
+import { Api } from "../Modules/api.js";
+import { animeDetailsHtml, animeEpisodio } from "../controlles/controlles.js";
 import { buttonSever } from "./buttonServ.js";
 
 

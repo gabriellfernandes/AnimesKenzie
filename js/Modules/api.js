@@ -10,7 +10,7 @@ export class Api {
         const date = await response.json();
         
         
-        return Card.animesComEpCard(date),this.getAnimeFilme(),this.getUltimosAnimes(),this.getTopAnimes();
+        Card.animesComEpCard(date),this.getAnimeFilme(),this.getUltimosAnimes(),this.getTopAnimes();
     }
 
     static async getAnimeFilme(){
@@ -26,7 +26,7 @@ export class Api {
                 return null
             }
         })
-        return Card.animesFilmeCard(dub);
+       Card.animesFilmeCard(dub);
     }
 
     static async getTopAnimes(){
@@ -47,7 +47,7 @@ export class Api {
         const response = await fetch(`${this.BASE}/top-airing`,{});
         
         const date = await response.json();
-        return Card.ultimosAnimesCard(date);
+        Card.ultimosAnimesCard(date);
     }
 
     static async getDetails(id){
