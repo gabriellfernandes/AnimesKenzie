@@ -1,4 +1,4 @@
-import { animeDetailsHtml, animeEpisodio,  animeRecente} from "./controllers.js";
+import { animeDetailsHtml, animeEpisodio,  animeRecente} from "./controlles.js";
 import { Api } from "../Modules/api.js";
 
 if(localStorage.getItem('anime') == "tate-no-yuusha-no-nariagari-season-2"){
