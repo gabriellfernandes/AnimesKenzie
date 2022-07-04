@@ -44,7 +44,7 @@ export function animeDetailsHtml(){
                     })
 
                     localStorage.setItem("anime", time.join("-"))
-                    window.location.href = "../Pages/AnimeDetails.html"
+                    window.location.href = ".../Pages/animeDetails.html"
                }
           }
          
