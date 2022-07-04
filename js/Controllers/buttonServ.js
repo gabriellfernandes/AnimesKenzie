@@ -1,4 +1,4 @@
-import { Api } from "../Modules/api.js"
+import { Api } from "../Modules/api.js";
 export function buttonSever(){
     document.body.addEventListener("click", (e) => {
          
