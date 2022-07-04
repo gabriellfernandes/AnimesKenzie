@@ -1,5 +1,5 @@
 import { Api } from "../Modules/api.js";
-import { animeDetailsHtml, animeEpisodio } from "../controlles/controlles.js";
+import { animeDetailsHtml, animeEpisodio } from "../Controllers/controllers.js";
 import { buttonSever } from "./buttonServ.js";
 
 
