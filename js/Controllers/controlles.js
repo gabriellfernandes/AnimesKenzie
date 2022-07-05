@@ -44,7 +44,7 @@ export function animeDetailsHtml(){
                     })
 
                     localStorage.setItem("anime", time.join("-"))
-                    window.location.href = ".././Pages/animeDetails.html"
+                    window.location.href = ".../Pages/AnimeDetails.html"
                }
           }
          
@@ -91,7 +91,7 @@ export function animeEpisodio(){
                     console.log(time.join("-"))
                     Api.getEpisodiosWatch(time.join("-"))
                     console.log(time.join("-"))
-                    return window.location.href = ".././Pages/episodio.html"
+                    return window.location.href = ".../Pages/episodio.html"
                     
                }
           }
