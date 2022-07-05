@@ -44,7 +44,7 @@ export function animeDetailsHtml(){
                     })
 
                     localStorage.setItem("anime", time.join("-"))
-                    window.location.href = "../../Pages/AnimeDetails.html"
+                    window.location.href = "./../../Pages/AnimeDetails.html"
                }
           }
          
@@ -67,7 +67,7 @@ export function animeDetailsHtmlFilme(){
                     })
 
                     localStorage.setItem("anime", time.join("-")+"-dub")
-                    window.location.href = "../../Pages/AnimeDetails.html"
+                    window.location.href = "./../../Pages/AnimeDetails.html"
                }
           }
          
@@ -91,7 +91,7 @@ export function animeEpisodio(){
                     console.log(time.join("-"))
                     Api.getEpisodiosWatch(time.join("-"))
                     console.log(time.join("-"))
-                    return window.location.href = "../../Pages/episodio.html"
+                    return window.location.href = "./../../Pages/episodio.html"
                     
                }
           }
@@ -117,7 +117,7 @@ export function animeRecente(){
                     })
                     localStorage.setItem("anime", time.join("-"))
                     localStorage.setItem("episodio", time.join("-") + "-episode-" + ep)
-                    return window.location.href = "../../Pages/episodio.html"
+                    return window.location.href = "./../../Pages/episodio.html"
                }
           }
          
