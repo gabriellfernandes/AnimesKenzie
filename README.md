@@ -1,5 +1,5 @@
 # AnimesKenzie
-Esse treinamento e para eu praticar as coisas que estou aprendendo com a Kenzie Academy.
+Esse treinamento e para eu praticar as coisas que estou aprendendo com a Kenzie Academy. Abril-2022
 
 O layout e o css foi baseado no site do AnimeUp, com algumas pequenas alterações.
 
